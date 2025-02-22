@@ -5,7 +5,7 @@ function rollDice() {
     let modifier = parselnt(document.getElementById('modifier').value);
     let total = 0
 
-    for (let i = 0, i < diceCount; i++) {
+    for (let i = 0; i < diceCount; i++) {
     let roll = Math.floor(Math.random() * maxValue) + 1;
     total += roll;
     resultText += `[${roll}]`;
@@ -14,5 +14,5 @@ function rollDice() {
     total += modifier;
     resultText += `+ ${modifier} = ${total}`;
 
-    document.getElementById('result').innerText = resultText
+    document.getElementById('result').innerText = resultText;
 }

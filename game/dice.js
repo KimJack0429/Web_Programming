@@ -1,5 +1,5 @@
 
-funtion rollDice() {
+function rollDice() {
     let maxValue = parselnt(document.getElementById('maxvalue').value);
     let diceCount = parselnt(document.getElementById('diceCount').value);
     let modifier = parselnt(document.getElementById('modifier').value);

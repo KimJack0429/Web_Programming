@@ -1,14 +1,12 @@
 
 
-
-
 button{
 	display: block;
 	background: grey;
 	width: 314px;
 	padding: 12px;
 	cursor: pointer;
-	color: #black;
+	color: black;
 	border: 0px;
 	margin: auto;
 	border-radius: 5px;

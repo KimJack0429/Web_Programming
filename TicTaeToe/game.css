@@ -1,4 +1,7 @@
-
+table{
+    background: white;
+    margin: auto;
+}
 
 button{
 	display: block;

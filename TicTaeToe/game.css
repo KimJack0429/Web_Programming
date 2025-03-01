@@ -4,23 +4,6 @@ body{
 	background: #white;
 }
 
-h1{
-	color: black;
-	text-align: center;
-	font-family: 'Arial';
-	font-weight: Lighter;
-	margin: auto 0px;
-	padding-bottom: 10px;
-}
-
-h2{
-	color: black;
-	text-align: center;
-	font-family: 'Arial';
-	font-weight: Lighter;
-	margin: auto 0px;
-	padding-bottom: 10px;
-}
 
 .form{
 	width: 400px;
@@ -31,21 +14,7 @@ h2{
 	border-radius: 0px;
 }
 
-input[type="text"]{
-	display: block;
-	width: 309px;
-	height: 35px;
-	margin: 15px auto;
-	background: #fff;
-	padding: 5px;
-	font-size: 16px;
-	border: 2px solid #fff;
-	transition: all 0.3s ease;
-	border-radius: 0px;
-}
-input[type="text"]:focus{
-	border: 2px solid #f9b8db
-}
+
 
 button{
 	display: block;
@@ -75,5 +44,5 @@ a{
 }
 
 a:hover{
-	color: #f9b8db;
+	color: #6673eb;
 }

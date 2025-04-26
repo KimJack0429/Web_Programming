@@ -45,3 +45,27 @@ rooms.forEach(room => {
         });
     });
 });
+
+const messageInput = document.getElementById('message-input');
+const sendButton = document.getElementById('send-button');
+
+// 메세지 전송
+function sendMessage() {
+    const text = messageInput.ariaValueMax.trim();
+    if (text === '') return;
+
+    chatData[currentRoom].push({ type: 'sent', text});
+    const div = document.createElement('div');
+    div.classList.add('message' , 'sent');
+    div.textContent = text;
+    chatMessages.appendChild(div);
+    messageInput.value = '';
+}
+
+// 버튼 클릭 또는 Enter 키 입력
+sendButton.addEventListener('click', sendMessage);
+messageInput.addEventListener('keypress', e => {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+});

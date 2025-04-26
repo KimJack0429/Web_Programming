@@ -22,8 +22,8 @@ const chatData = {
 };
 
 const rooms = document.querySelectorAll('.chat-room');
-const chatHeader = document.getElementById('.chat-header');
-const chatMessages = document.getElementById('.chat-messages');
+const chatHeader = document.getElementById('chat-header');
+const chatMessages = document.getElementById('chat-messages');
 
 rooms.forEach(room => {
     room.addEventListener('click', () => {

@@ -20,3 +20,28 @@ const chatData = {
         {type: 'sent', text: '그럼 오늘 저녁에 반영할게요'}
     ]
 };
+
+const rooms = document.querySelectorAll('.chat-room');
+const chatHeader = document.getElementById('.chat-header');
+const chatMessages = document.getElementById('.chat-messages');
+
+rooms.forEach(room => {
+    room.addEventListener('click', () => {
+        const roomName = room.id;
+        const messages = chatData[roomName];
+
+        // 제목 변경
+        chatHeader.textContent = roomName;
+
+        // 메세지 초기화
+        chatMessages.innerHTML = '';
+
+        // 메세지 추가
+        messages.forEach(msg => {
+            const div = document.createElement('div');
+            div.classList.add('message' , msg.type);
+            div.textContent = msg.text;
+            chatMessages.appendChild(div);
+        });
+    });
+});

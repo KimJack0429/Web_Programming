@@ -47,7 +47,29 @@ const chatData = {
       renderMessages(currentRoom);
     });
   });
-  
+
+function getBotReply(userText) {
+    const text = userText.toLowerCase();
+
+    if (text.includes("안녕")) return "안녕하세요! 반가워요!";
+    if (text.includes("배고파")) return "뭐 맛있는거 드새요~";
+    if (text.includes("졸려")) return "잠시 눈 붙이세요";
+    if (text.includes("공부")) return "화이팅! 지금이 가장 빠른 시간이에요";
+    if (text.includes("심심")) return "산책이라도 나가볼까요?";
+    if (text.includes("고마워")) return "언제든지요";
+    if (text.includes("잘자")) return "좋은 꿈 꾸세요";
+
+    // 키워드 없으면 랜덤 응답
+    const randomReplies = [
+        "오 진짜요?",
+        "그렇군요!",
+        "음... 다시 말씀해주시겠어요?",
+        "ㅋㅋㅋㅋ",
+        "알겠습니다~"
+    ];
+
+    return randomReplies[Math.floor(Math.random() * randomReplies.length)];
+}
   
   const messageInput = document.getElementById('message-input');
   const sendButton = document.getElementById('send-button');

@@ -66,10 +66,12 @@ function getBotReply(userText) {
         "음... 다시 말씀해주시겠어요?",
         "ㅋㅋㅋㅋ",
         "알겠습니다~"
+
     ];
 
     return randomReplies[Math.floor(Math.random() * randomReplies.length)];
 }
+
   
   const messageInput = document.getElementById('message-input');
   const sendButton = document.getElementById('send-button');
@@ -85,6 +87,13 @@ function getBotReply(userText) {
     div.textContent = text;
     chatMessages.appendChild(div);
     messageInput.value = '';
+
+    reply = getBotReply(text);
+    chatData[currentRoom].push({ type:'received', text:reply });
+    const div2 = document.createElement('div');
+    div2.classList.add('message', 'received');
+    div2.textContent = reply;
+    chatMessages.appendChild(div2);
   }
   
   // 버튼 클릭 또는 Enter 키 입력
@@ -94,6 +103,7 @@ function getBotReply(userText) {
       sendMessage();
     }
   });
-  
+
+
   
   

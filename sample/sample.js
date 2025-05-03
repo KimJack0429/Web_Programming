@@ -51,7 +51,7 @@ const sendButton = document.getElementById('send-button');
 
 // 메세지 전송
 function sendMessage() {
-    const text = messageInput.ariaValueMax.trim();
+    const text = messageInput.value.trim();
     if (text === '') return;
 
     chatData[currentRoom].push({ type: 'sent', text});
